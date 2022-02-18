@@ -1,0 +1,22 @@
+{
+  "short_name": "Admin Portal | Mission School",
+  "name": "Admin Portal | Mission School",
+  "description": "",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "pwa.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": "./?v3&utm_source=web_app_manifest",
+  "background_color": "#fff",
+  "theme_color": "#007bff",
+  "color": "#000000",
+  "display": "minimal-ui",
+  "related_applications": [{
+    "platform": "web",
+    "url": "https://admin.missioncosmopolitanschool.com"
+  }]
+}
