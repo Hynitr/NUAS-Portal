@@ -80,7 +80,7 @@ $pdf->SetFont('Arial','',10);
 
         $pdf->SetFont('times','',12);
         $pdf->Ln(8);
-        $pdf->Write(19,'The payments are to be made into the school`s ACCOUNT NUMBER: 0781630015, at the First City ');
+        $pdf->Write(19,'The payments are to be made into the school`s ACCOUNT NUMBER: 2083753057, at the Zenith Bank ');
         $pdf->Ln(8);
         $pdf->Write(19,'Monument Bank(FCMB) or Gateway Mortage Bank(GMB) with ACCOUNT NUMBER: 1000109147 ');
         $pdf->Ln(8);
@@ -199,9 +199,7 @@ $pdf->SetFont('Arial','',10);
 
         $pdf->SetFont('times','',12);
         $pdf->Ln(8);
-        $pdf->Write(19,'The payments are to be made into the school`s ACCOUNT NUMBER: 0781630015, at the First City ');
-        $pdf->Ln(8);
-        $pdf->Write(19,'Monument Bank(FCMB) or Gateway Mortage Bank(GMB) with ACCOUNT NUMBER: 1000109147 ');
+        $pdf->Write(19,'The payments are to be made into the school`s ACCOUNT NUMBER: 2083753057, at the ZENITH BANK ');
         $pdf->Ln(8);
         $pdf->Write(19,'Teller are expected to be brought to the school in exchange for the school receipt. It is important that the');
         $pdf->Ln(8);

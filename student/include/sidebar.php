@@ -145,6 +145,12 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a target="_blank" href="medical form.pdf" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Medical Form</p>
+                                    </a>
+                                </li>
 
                                 <?php
                  
