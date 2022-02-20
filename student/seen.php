@@ -31,8 +31,8 @@ if(!isset($_SESSION['secured'])) {
 
 			if($y == "am") {
 
-		$a = urlencode('Greatnessabolade@outlook.com'); //Note: urlencodemust be added forusernameand
-		$b = urlencode('securemelikekilode'); // passwordas encryption code for security purpose.
+		$a = urlencode('adelankeboluwaji@gmail.com'); //Note: urlencodemust be added forusernameand
+		$b = urlencode('Oluwatosin'); // passwordas encryption code for security purpose.
 		$c = "Dear parent , Your child - ".$m." resumed school ".$j." Thank you!";
 		$d = $_SESSION['cal']['blksmsname'];
 		$e = $x;
@@ -43,18 +43,17 @@ if(!isset($_SESSION['secured'])) {
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
-		$resp = curl_exec($ch);
 
-		$result = json_decode($resp);
+		$result  = file_get_contents($url);
 
-		$errc =  $result->errno;
-
-		if($errc == 150) {
-
-			echo "BulkSMS Credit Exhausted";
-		} else {
-
-			
+		$result  = json_decode($result);
+		
+		if(isset($result->error))
+		{
+		  // Message failed, check reason.
+		
+		echo 'Message failed - error: '.$result->error;
+		}else if(isset($result->status) && strtoupper($result->status) == 'OK') {
 		
 		$sl = "UPDATE students set `Active` = '1' WHERE `qrid` = '$data'";
 		$re = query($sl);
@@ -106,7 +105,7 @@ if(!isset($_SESSION['secured'])) {
 		  
 		  <div class="lockscreen-footer text-center">
 		    Copyright &copy; '.date("Y").' <b><a href="'.$call["website"].'" class="text-black">'.$call["school"].'</a></b><br>
-		    Developed by <a target="_blank" href="https://doteightplus.com" class="text-black"> DotEightPlus</a>
+		    Developed by <a target="_blank" href="https://hyynitr.com" class="text-black"> hyynitr</a>
 		  </div>
 		</div>
 		<!-- /.center -->
@@ -128,8 +127,8 @@ if(!isset($_SESSION['secured'])) {
 		}else {
 
 
-		$a = urlencode('Greatnessabolade@outlook.com'); //Note: urlencodemust be added forusernameand
-		$b = urlencode('securemelikekilode'); // passwordas encryption code for security purpose.
+			$a = urlencode('adelankeboluwaji@gmail.com'); //Note: urlencodemust be added forusernameand
+			$b = urlencode('Oluwatosin'); // passwordas encryption code for security purpose.
 		$c = "Dear parent, Your child - ".$m." left the school at ".$j.". Please inspect the assignment(s) given. Thank you!";
 		$d = $_SESSION['cal']['blksmsname'];
 		$e = $x;
@@ -139,16 +138,17 @@ if(!isset($_SESSION['secured'])) {
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
-		$resp = curl_exec($ch);
+		
+		$result  = file_get_contents($url);
 
-		$result = json_decode($resp);
-
-		$errc =  $result->errno;
-
-		if($errc == 150) {
-
-			echo "BulkSMS Credit Exhausted";
-		} else {
+		$result  = json_decode($result);
+		
+		if(isset($result->error))
+		{
+		  // Message failed, check reason.
+		
+		echo 'Message failed - error: '.$result->error;
+		} else if(isset($result->status) && strtoupper($result->status) == 'OK'){
 		
 		$l = "UPDATE students set `Active` = '0' WHERE `qrid` = '$data'";
 		$e = mysqli_query($con, $l);
@@ -200,7 +200,7 @@ if(!isset($_SESSION['secured'])) {
 		  
 		  <div class="lockscreen-footer text-center">
 		    Copyright &copy; '.date("Y").' <b><a href="'.$call["website"].'" class="text-black">'.$call["school"].'</a></b><br>
-		   Developed by <a target="_blank" href="https://doteightplus.com" class="text-black"> DotEightPlus</a>
+		   Developed by <a target="_blank" href="https://hyynitr.com" class="text-black"> hyynitr</a>
 		  </div>
 		</div>
 		<!-- /.center -->
