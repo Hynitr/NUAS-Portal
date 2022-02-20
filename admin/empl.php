@@ -104,14 +104,14 @@ $pdf->SetFont('Arial','',10);
         $pdf->Ln(5);
         $pdf->Write(19,'     money owed is paid up.');
         $pdf->Ln(8);
-        $pdf->Write(19,'9. Every staff is expected to be a member of the Paradise Staff Cooperative');
+        $pdf->Write(19,'9. Every staff is expected to be a member of the New Unique Staff Cooperative');
         $pdf->Ln(8);
         $pdf->Write(19,'10. Please note that this term is subject to change whenever the school management deem fits.');
         $pdf->Ln(8);
         $pdf->Write(19,'May you find grace to offer your duties to the best of your abilities.');
          $pdf->Ln(11);
         $pdf->SetFont('times','B',12);
-        $pdf->Write(19,'The School Manager');     
+        $pdf->Write(19,'The School Management');     
         
      
 }
@@ -161,12 +161,10 @@ if ($row['category'] == "Non-Teaching Staff") {
         $pdf->Ln(7);
         $pdf->Write(19,'    ii. You may be required to come for duty on Saturdays as the exigency of your job may demand from time to time.');
         $pdf->Ln(8);
-        $pdf->Write(19,'5. You are entitled to half salary during the holiday of your probation period only when you come for duty as required');
-        $pdf->Ln(8);
-        $pdf->Write(19,'6. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
+        $pdf->Write(19,'5. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
         $pdf->Ln(8);
         $pdf->SetFont('times','B',11);
-        $pdf->Write(19,'7. Salary and allowance');
+        $pdf->Write(19,'6. Salary and allowance');
         $pdf->Ln(7);
         $pdf->SetFont('times','',11);
         $pdf->Write(19,'    The salary attached to this offer are as follows;');
@@ -182,20 +180,20 @@ if ($row['category'] == "Non-Teaching Staff") {
         $pdf->Write(19,'    Gross Total.: NGN '.number_format($row['salary'] + $row['transport'] + $row['medical']));
         $pdf->SetFont('times','',11);
         $pdf->Ln(8);
-        $pdf->Write(19,'8. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
+        $pdf->Write(19,'7. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
         $pdf->Ln(5);
         $pdf->Write(19,'     as the monthly salary is paid. Staff who had collected a contribution cannot withdraw their appointment untill all the');
         $pdf->Ln(5);
         $pdf->Write(19,'     money owed is paid up.');
         $pdf->Ln(8);
-        $pdf->Write(19,'9. Every staff is expected to be a member of the Paradise Staff Cooperative');
+        $pdf->Write(19,'8. Every staff is expected to be a member of the New Unique Staff Cooperative');
         $pdf->Ln(8);
-        $pdf->Write(19,'10. Please note that this term is subject to change whenever the school management deem fits.');
+        $pdf->Write(19,'9. Please note that this term is subject to change whenever the school management deem fits.');
         $pdf->Ln(8);
         $pdf->Write(19,'May you find grace to offer your duties to the best of your abilities.');
          $pdf->Ln(11);
         $pdf->SetFont('times','B',12);
-        $pdf->Write(19,'The School Manager');   
+        $pdf->Write(19,'The School Management');   
 } else  {
 
     if ($row['category'] == "Management Staff") {
@@ -242,12 +240,10 @@ if ($row['category'] == "Non-Teaching Staff") {
         $pdf->Ln(7);
         $pdf->Write(19,'    ii. You may be required to come for duty on Saturdays as the exigency of your job may demand from time to time.');
         $pdf->Ln(8);
-        $pdf->Write(19,'5. You are entitled to half salary during the holiday of your probation period only when you come for duty as required');
-        $pdf->Ln(8);
-        $pdf->Write(19,'6. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
+        $pdf->Write(19,'5. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
         $pdf->Ln(8);
         $pdf->SetFont('times','B',11);
-        $pdf->Write(19,'7. Salary and allowance');
+        $pdf->Write(19,'6. Salary and allowance');
         $pdf->Ln(7);
         $pdf->SetFont('times','',11);
         $pdf->Write(19,'    The salary attached to this offer are as follows;');
@@ -263,20 +259,20 @@ if ($row['category'] == "Non-Teaching Staff") {
         $pdf->Write(19,'    Gross Total.: NGN '.number_format($row['salary'] + $row['transport'] + $row['medical']));
         $pdf->SetFont('times','',11);
         $pdf->Ln(8);
-        $pdf->Write(19,'8. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
+        $pdf->Write(19,'7. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
         $pdf->Ln(5);
         $pdf->Write(19,'     as the monthly salary is paid. Staff who had collected a contribution cannot withdraw their appointment untill all the');
         $pdf->Ln(5);
         $pdf->Write(19,'     money owed is paid up.');
         $pdf->Ln(8);
-        $pdf->Write(19,'9. Every staff is expected to be a member of the Paradise Staff Cooperative');
+        $pdf->Write(19,'8. Every staff is expected to be a member of the New Unique Staff Cooperative');
         $pdf->Ln(8);
-        $pdf->Write(19,'10. Please note that this term is subject to change whenever the school management deem fits.');
+        $pdf->Write(19,'9. Please note that this term is subject to change whenever the school management deem fits.');
         $pdf->Ln(8);
         $pdf->Write(19,'May you find grace to offer your duties to the best of your abilities.');
          $pdf->Ln(11);
         $pdf->SetFont('times','B',12);
-        $pdf->Write(19,'The School Manager');   
+        $pdf->Write(19,'The School Management');   
 
     }
 }
@@ -372,12 +368,10 @@ $pdf->SetFont('Arial','',10);
         $pdf->Ln(7);
         $pdf->Write(19,'    ii. You may be required to come for duty on Saturdays as the exigency of your job may demand from time to time.');
         $pdf->Ln(8);
-        $pdf->Write(19,'5. You are entitled to half salary during the holiday of your probation period only when you come for duty as required');
-        $pdf->Ln(8);
-        $pdf->Write(19,'6. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
+        $pdf->Write(19,'5. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
         $pdf->Ln(8);
         $pdf->SetFont('times','B',11);
-        $pdf->Write(19,'7. Salary and allowance');
+        $pdf->Write(19,'6. Salary and allowance');
         $pdf->Ln(7);
         $pdf->SetFont('times','',11);
         $pdf->Write(19,'    The salary attached to this offer are as follows;');
@@ -393,20 +387,20 @@ $pdf->SetFont('Arial','',10);
         $pdf->Write(19,'    Gross Total.: NGN '.number_format($row['salary'] + $row['transport'] + $row['medical']));
         $pdf->SetFont('times','',11);
         $pdf->Ln(8);
-        $pdf->Write(19,'8. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
+        $pdf->Write(19,'7. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
         $pdf->Ln(5);
         $pdf->Write(19,'     as the monthly salary is paid. Staff who had collected a contribution cannot withdraw their appointment untill all the');
         $pdf->Ln(5);
         $pdf->Write(19,'     money owed is paid up.');
         $pdf->Ln(8);
-        $pdf->Write(19,'9. Every staff is expected to be a member of the Paradise Staff Cooperative');
+        $pdf->Write(19,'8. Every staff is expected to be a member of the New Unique Staff Cooperative');
         $pdf->Ln(8);
-        $pdf->Write(19,'10. Please note that this term is subject to change whenever the school management deem fits.');
+        $pdf->Write(19,'9. Please note that this term is subject to change whenever the school management deem fits.');
         $pdf->Ln(8);
         $pdf->Write(19,'May you find grace to offer your duties to the best of your abilities.');
          $pdf->Ln(11);
         $pdf->SetFont('times','B',12);
-        $pdf->Write(19,'The School Manager');     
+        $pdf->Write(19,'The School Management');     
         
      
 }
@@ -456,12 +450,10 @@ if ($row['category'] == "Non-Teaching Staff") {
         $pdf->Ln(7);
         $pdf->Write(19,'    ii. You may be required to come for duty on Saturdays as the exigency of your job may demand from time to time.');
         $pdf->Ln(8);
-        $pdf->Write(19,'5. You are entitled to half salary during the holiday of your probation period only when you come for duty as required');
-        $pdf->Ln(8);
-        $pdf->Write(19,'6. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
+        $pdf->Write(19,'5. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
         $pdf->Ln(8);
         $pdf->SetFont('times','B',11);
-        $pdf->Write(19,'7. Salary and allowance');
+        $pdf->Write(19,'6. Salary and allowance');
         $pdf->Ln(7);
         $pdf->SetFont('times','',11);
         $pdf->Write(19,'    The salary attached to this offer are as follows;');
@@ -477,20 +469,20 @@ if ($row['category'] == "Non-Teaching Staff") {
         $pdf->Write(19,'    Gross Total.: NGN '.number_format($row['salary'] + $row['transport'] + $row['medical']));
         $pdf->SetFont('times','',11);
         $pdf->Ln(8);
-        $pdf->Write(19,'8. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
+        $pdf->Write(19,'7. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
         $pdf->Ln(5);
         $pdf->Write(19,'     as the monthly salary is paid. Staff who had collected a contribution cannot withdraw their appointment untill all the');
         $pdf->Ln(5);
         $pdf->Write(19,'     money owed is paid up.');
         $pdf->Ln(8);
-        $pdf->Write(19,'9. Every staff is expected to be a member of the Paradise Staff Cooperative');
+        $pdf->Write(19,'8. Every staff is expected to be a member of the New Unique Staff Cooperative');
         $pdf->Ln(8);
-        $pdf->Write(19,'10. Please note that this term is subject to change whenever the school management deem fits.');
+        $pdf->Write(19,'9. Please note that this term is subject to change whenever the school management deem fits.');
         $pdf->Ln(8);
         $pdf->Write(19,'May you find grace to offer your duties to the best of your abilities.');
          $pdf->Ln(11);
         $pdf->SetFont('times','B',12);
-        $pdf->Write(19,'The School Manager');   
+        $pdf->Write(19,'The School Management');   
 } else  {
 
     if ($row['category'] == "Management Staff") {
@@ -537,12 +529,10 @@ if ($row['category'] == "Non-Teaching Staff") {
         $pdf->Ln(7);
         $pdf->Write(19,'    ii. You may be required to come for duty on Saturdays as the exigency of your job may demand from time to time.');
         $pdf->Ln(8);
-        $pdf->Write(19,'5. You are entitled to half salary during the holiday of your probation period only when you come for duty as required');
-        $pdf->Ln(8);
-        $pdf->Write(19,'6. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
+        $pdf->Write(19,'5. Salary during the holiday is paid only when you are required to come for duty the holiday periods.');
         $pdf->Ln(8);
         $pdf->SetFont('times','B',11);
-        $pdf->Write(19,'7. Salary and allowance');
+        $pdf->Write(19,'6. Salary and allowance');
         $pdf->Ln(7);
         $pdf->SetFont('times','',11);
         $pdf->Write(19,'    The salary attached to this offer are as follows;');
@@ -558,20 +548,20 @@ if ($row['category'] == "Non-Teaching Staff") {
         $pdf->Write(19,'    Gross Total.: NGN '.number_format($row['salary'] + $row['transport'] + $row['medical']));
         $pdf->SetFont('times','',11);
         $pdf->Ln(8);
-        $pdf->Write(19,'8. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
+        $pdf->Write(19,'7. School contribution policy: every staff shall participate in the contribution and repayment of such shall be from source');
         $pdf->Ln(5);
         $pdf->Write(19,'     as the monthly salary is paid. Staff who had collected a contribution cannot withdraw their appointment untill all the');
         $pdf->Ln(5);
         $pdf->Write(19,'     money owed is paid up.');
         $pdf->Ln(8);
-        $pdf->Write(19,'9. Every staff is expected to be a member of the Paradise Staff Cooperative');
+        $pdf->Write(19,'8. Every staff is expected to be a member of the New Unique Staff Cooperative');
         $pdf->Ln(8);
-        $pdf->Write(19,'10. Please note that this term is subject to change whenever the school management deem fits.');
+        $pdf->Write(19,'9. Please note that this term is subject to change whenever the school management deem fits.');
         $pdf->Ln(8);
         $pdf->Write(19,'May you find grace to offer your duties to the best of your abilities.');
          $pdf->Ln(11);
         $pdf->SetFont('times','B',12);
-        $pdf->Write(19,'The School Manager');   
+        $pdf->Write(19,'The School Management');   
 
     }
 }
