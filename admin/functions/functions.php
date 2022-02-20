@@ -180,7 +180,7 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
 	$d = md5($code);
 
 	//send message to new parent
-	$c = "Dear ".$paren.", welcome to ".$_SESSION['cal']['school']." Thank you for entrusting your child education with us";
+	$c = "Dear ".$paren.", welcome to ".$_SESSION['cal']['school']." Thank you for entrusting your child's education with us";
 	$f = $_SESSION['cal']['blksmsname'];
 	  
 	$z = $dnu." ".$mnu;
