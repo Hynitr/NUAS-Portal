@@ -221,22 +221,12 @@ else
     echo 'Unable to process request';
 }
 
-   /*$errc =  $result->errno;
-
-   if($errc == 150) {
-
-	echo "BulkSMS Credit Exhausted";
-   } else {
-
-	echo 'Loading.. Please wait';
-   }*/
-
-/*$sql2 = "INSERT INTO students(`Admincode`, `AdminID`, `Admission No.`, `sn`, `SurName`, `Middle Name`, `Last Name`, `cbk`, `suF`, `Date`, `Month`, `Year`, `Gender`, `schlst`, `parent`, `relation`, `occupation`, `Telephone1`, `Address 1`, `Telephone2`, `Datereg`, `Class`, `Department`, `Active`, `SchF`, `AcF`, `qrid`, `fee`, `2ndfee`, `3rdfee`)";
+$sql2 = "INSERT INTO students(`Admincode`, `AdminID`, `Admission No.`, `sn`, `SurName`, `Middle Name`, `Last Name`, `cbk`, `suF`, `Date`, `Month`, `Year`, `Gender`, `schlst`, `parent`, `relation`, `occupation`, `Telephone1`, `Address 1`, `Telephone2`, `Datereg`, `Class`, `Department`, `Active`, `SchF`, `AcF`, `qrid`, `fee`, `2ndfee`, `3rdfee`)";
 $sql2.= " VALUES('$admcode', '$code', '$e', '1', '$sname', '$fname', '$lname', '$rpwor', '$pwor', '$day', '$mont', '$yea', '$gend', '$schl', '$paren', '$rel', '$occ', '$dnu', '$ad', '$mnu', '$datereg', '$cls', '$dep', '0', '$sh', '$ac', '$d', 'unpaid', 'unpaid', 'unpaid')";
 $result = query($sql2);
 
 $_SESSION['code'] = $code;	
-echo '<script>window.location.href ="./enrollupload?id='.$code.'"</script>';*/
+echo '<script>window.location.href ="./enrollupload?id='.$code.'"</script>';
 }
 
 
@@ -759,19 +749,34 @@ curl_setopt($ch, CURLOPT_HEADER, 0);
 $resp = curl_exec($ch);
 curl_close($ch);
 
-$result = json_decode($resp);
+$result  = file_get_contents($url);
 
-$errc =  $result->errno;
+$result  = json_decode($result);
 
-if($errc == 150) {
+if(isset($result->status) && strtoupper($result->status) == 'OK')
+{
+ // Message sent successfully, do anything here
 
- echo "BulkSMS Credit Exhausted";
-} else {
+ echo 'Message sent at N'.$result->price;
 
-echo 'Loading.. Please wait';
-$_SESSION['msgs'] = "Message sent successfully";
-echo '<script>window.location.href ="./parent"</script>';
+ echo 'Loading.. Please wait';
+ $_SESSION['msgs'] = "Message sent successfully";
+ echo '<script>window.location.href ="./parent"</script>';
+
 }
+else if(isset($result->error))
+{
+  // Message failed, check reason.
+
+echo 'Message failed - error: '.$result->error;
+}
+else
+{
+ // Could not determine the message response.
+
+ echo 'Unable to process request';
+}
+
 }
 }
 
@@ -803,19 +808,33 @@ curl_setopt($ch, CURLOPT_HEADER, 0);
 $resp = curl_exec($ch);
 curl_close($ch);
 
-$result = json_decode($resp);
+$result  = file_get_contents($url);
 
-$errc =  $result->errno;
+$result  = json_decode($result);
 
-if($errc == 150) {
+if(isset($result->status) && strtoupper($result->status) == 'OK')
+{
+ // Message sent successfully, do anything here
 
- echo "BulkSMS Credit Exhausted";
-} else {
+ echo 'Message sent at N'.$result->price;
 
  echo 'Loading.. Please wait';
 $_SESSION['msgs'] = "Message sent successfully";
 echo '<script>window.location.href ="./staffs"</script>';
 }
+else if(isset($result->error))
+{
+  // Message failed, check reason.
+
+echo 'Message failed - error: '.$result->error;
+}
+else
+{
+ // Could not determine the message response.
+
+ echo 'Unable to process request';
+}
+
 }
 }
 
