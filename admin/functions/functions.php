@@ -199,7 +199,7 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
 
    $result = json_decode($resp);
 
-   $errc =  $result->errno;
+   /*$errc =  $result->errno;
 
    if($errc == 150) {
 
@@ -207,7 +207,7 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
    } else {
 
 	echo 'Loading.. Please wait';
-   }
+   }*/
 
 /*$sql2 = "INSERT INTO students(`Admincode`, `AdminID`, `Admission No.`, `sn`, `SurName`, `Middle Name`, `Last Name`, `cbk`, `suF`, `Date`, `Month`, `Year`, `Gender`, `schlst`, `parent`, `relation`, `occupation`, `Telephone1`, `Address 1`, `Telephone2`, `Datereg`, `Class`, `Department`, `Active`, `SchF`, `AcF`, `qrid`, `fee`, `2ndfee`, `3rdfee`)";
 $sql2.= " VALUES('$admcode', '$code', '$e', '1', '$sname', '$fname', '$lname', '$rpwor', '$pwor', '$day', '$mont', '$yea', '$gend', '$schl', '$paren', '$rel', '$occ', '$dnu', '$ad', '$mnu', '$datereg', '$cls', '$dep', '0', '$sh', '$ac', '$d', 'unpaid', 'unpaid', 'unpaid')";
