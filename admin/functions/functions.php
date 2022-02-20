@@ -180,13 +180,13 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
 	$d = md5($code);
 
 	//send message to new parent
-	/*$c = "Dear ".$paren.", welcome to ".$_SESSION['cal']['school']." Thank you for entrusting your child education with us";
+	$c = "Dear ".$paren.", welcome to ".$_SESSION['cal']['school']." Thank you for entrusting your child education with us";
 	$f = $_SESSION['cal']['blksmsname'];
 	  
 	$z = $dnu." ".$mnu;
    
-   $a = urlencode('greatnessabolade@outlook.com'); //Note: urlencodemust be added forusernameand
-   $b = urlencode('securemelikekilode'); // passwordas encryption code for security purpose.
+   $a = urlencode('adelankeboluwaji@gmail.com'); //Note: urlencodemust be added forusernameand
+   $b = urlencode('Oluwatosin'); // passwordas encryption code for security purpose.
    
    $url = "https://portal.nigeriabulksms.com/api/?username=".$a."&password=".$b."&message=".$c."&sender=".$f."&mobiles=".$z;
    $ch = curl_init();
@@ -207,7 +207,7 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
    } else {
 
 	echo 'Loading.. Please wait';
-   }*/	
+   }
 
 $sql2 = "INSERT INTO students(`Admincode`, `AdminID`, `Admission No.`, `sn`, `SurName`, `Middle Name`, `Last Name`, `cbk`, `suF`, `Date`, `Month`, `Year`, `Gender`, `schlst`, `parent`, `relation`, `occupation`, `Telephone1`, `Address 1`, `Telephone2`, `Datereg`, `Class`, `Department`, `Active`, `SchF`, `AcF`, `qrid`, `fee`, `2ndfee`, `3rdfee`)";
 $sql2.= " VALUES('$admcode', '$code', '$e', '1', '$sname', '$fname', '$lname', '$rpwor', '$pwor', '$day', '$mont', '$yea', '$gend', '$schl', '$paren', '$rel', '$occ', '$dnu', '$ad', '$mnu', '$datereg', '$cls', '$dep', '0', '$sh', '$ac', '$d', 'unpaid', 'unpaid', 'unpaid')";
@@ -715,7 +715,7 @@ if (isset($_POST['delstf'])) {
 
 //--------------- send parent sms ---------------//
 
-/*if (isset($_POST['msg'])) {
+if (isset($_POST['msg'])) {
 
   $c = $_POST['msg'];
   $d = $_SESSION['cal']['blksmsname'];
@@ -725,8 +725,8 @@ if (isset($_POST['delstf'])) {
   while ($row = mysqli_fetch_array($res)) {
   $x = $row['Telephone1']." ".$row['Telephone2'];
  
-$a = urlencode('greatnessabolade@outlook.com'); //Note: urlencodemust be added forusernameand
-$b = urlencode('securemelikekilode'); // passwordas encryption code for security purpose.
+  $a = urlencode('adelankeboluwaji@gmail.com'); //Note: urlencodemust be added forusernameand
+  $b = urlencode('Oluwatosin'); // passwordas encryption code for security purpose.
 
 $url = "https://portal.nigeriabulksms.com/api/?username=".$a."&password=".$b."&message=".$c."&sender=".$d."&mobiles=".$x;
 $ch = curl_init();
@@ -751,14 +751,14 @@ $_SESSION['msgs'] = "Message sent successfully";
 echo '<script>window.location.href ="./parent"</script>';
 }
 }
-}*/
+}
 
 
 
 
 //------- send staff sms -----//
 
-/*if (isset($_POST['msgr'])) {
+if (isset($_POST['msgr'])) {
 
   $c = $_POST['msgr'];
   $d = $_SESSION['cal']['blksmsname'];
@@ -769,8 +769,8 @@ echo '<script>window.location.href ="./parent"</script>';
    
   $x = $row['tel1'];
  
-$a = urlencode('greatnessabolade@outlook.com'); //Note: urlencodemust be added forusernameand
-$b = urlencode('securemelikekilode'); // passwordas encryption code for security purpose.
+  $a = urlencode('adelankeboluwaji@gmail.com'); //Note: urlencodemust be added forusernameand
+  $b = urlencode('Oluwatosin'); // passwordas encryption code for security purpose.
 
 $url = "https://portal.nigeriabulksms.com/api/?username=".$a."&password=".$b."&message=".$c."&sender=".$d."&mobiles=".$x;
 $ch = curl_init();
@@ -795,7 +795,7 @@ $_SESSION['msgs'] = "Message sent successfully";
 echo '<script>window.location.href ="./staffs"</script>';
 }
 }
-}*/
+}
 
 
 //birthday alert 
