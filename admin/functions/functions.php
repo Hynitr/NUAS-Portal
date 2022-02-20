@@ -197,7 +197,29 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
    $resp = curl_exec($ch);
    curl_close($ch);
 
-   $result = json_decode($resp);
+   $result  = file_get_contents($url);
+
+   $result  = json_decode($result);
+   
+   if(isset($result->status) && strtoupper($result->status) == 'OK')
+{
+    // Message sent successfully, do anything here
+
+    echo 'Message sent at N'.$result->price;
+
+}
+else if(isset($result->error))
+{
+     // Message failed, check reason.
+
+   echo 'Message failed - error: '.$result->error;
+}
+else
+{
+    // Could not determine the message response.
+
+    echo 'Unable to process request';
+}
 
    /*$errc =  $result->errno;
 
