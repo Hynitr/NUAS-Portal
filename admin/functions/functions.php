@@ -160,7 +160,7 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
 	$sh 				= escape($schf);
 	$ac 				= escape($acf);
 
-	$datereg = date("Y-m-d h:i:sa");
+	$datereg = date("Y-m-d h:i:s");
 
 	/*$sql = "SELECT * FROM students";
 	$res = query($sql);
@@ -185,7 +185,7 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
 	  
 	$z = $dnu." ".$mnu;
    
-   $a = urlencode('adelankeboluwaji@gmail.com'); //Note: urlencodemust be added forusernameand
+   /*$a = urlencode('adelankeboluwaji@gmail.com'); //Note: urlencodemust be added forusernameand
    $b = urlencode('Oluwatosin'); // passwordas encryption code for security purpose.
    
    $url = "https://portal.nigeriabulksms.com/api/?username=".$a."&password=".$b."&message=".$c."&sender=".$f."&mobiles=".$z;
@@ -219,7 +219,7 @@ else
     // Could not determine the message response.
 
     echo 'Unable to process request';
-}
+}*/
 
 $sql2 = "INSERT INTO students(`Admincode`, `AdminID`, `Admission No.`, `sn`, `SurName`, `Middle Name`, `Last Name`, `cbk`, `suF`, `Date`, `Month`, `Year`, `Gender`, `schlst`, `parent`, `relation`, `occupation`, `Telephone1`, `Address 1`, `Telephone2`, `Datereg`, `Class`, `Department`, `Active`, `SchF`, `AcF`, `qrid`, `fee`, `2ndfee`, `3rdfee`)";
 $sql2.= " VALUES('$admcode', '$code', '$e', '1', '$sname', '$fname', '$lname', '$rpwor', '$pwor', '$day', '$mont', '$yea', '$gend', '$schl', '$paren', '$rel', '$occ', '$dnu', '$ad', '$mnu', '$datereg', '$cls', '$dep', '0', '$sh', '$ac', '$d', 'unpaid', 'unpaid', 'unpaid')";
@@ -483,7 +483,7 @@ appoint($title, $surname, $firstname, $lastname, $date, $month, $year, $gender, 
 function appoint($title, $surname, $firstname, $lastname, $date, $month, $year, $gender, $schlst, $lass, $disc, $cat, $classr, $dept, $post, $subj, $parent, $relation, $occupation, $add, $addd, $dnum, $mnum, $bsm, $tam, $mall) {
 
 
-	$datereg = date("Y-m-d h:i:sa");
+	$datereg = date("Y-m-d h:i:s");
 
 	if($bsm == '') {
 		$bsm = 0;
